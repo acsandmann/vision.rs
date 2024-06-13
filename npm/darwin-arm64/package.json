@@ -1,15 +1,15 @@
 {
-  "name": "@napi-rs/package-template-darwin-arm64",
-  "version": "1.0.0",
+  "name": "@asandmann/vision-darwin-arm64",
+  "version": "0.0.1",
   "os": [
     "darwin"
   ],
   "cpu": [
     "arm64"
   ],
-  "main": "package-template.darwin-arm64.node",
+  "main": "vision.darwin-arm64.node",
   "files": [
-    "package-template.darwin-arm64.node"
+    "vision.darwin-arm64.node"
   ],
   "description": "Template project for writing node package with napi-rs",
   "keywords": [

@@ -1,6 +1,6 @@
 {
-  "name": "@napi-rs/package-template",
-  "version": "1.0.0",
+  "name": "@asandmann/vision",
+  "version": "0.0.1",
   "description": "Template project for writing node package with napi-rs",
   "main": "index.js",
   "repository": "git@github.com:napi-rs/package-template.git",
@@ -18,20 +18,11 @@
     "index.js"
   ],
   "napi": {
-    "name": "package-template",
+    "name": "@asandmann/vision",
     "triples": {
       "defaults": true,
       "additional": [
-        "x86_64-unknown-linux-musl",
-        "aarch64-unknown-linux-gnu",
-        "i686-pc-windows-msvc",
-        "armv7-unknown-linux-gnueabihf",
-        "aarch64-apple-darwin",
-        "aarch64-linux-android",
-        "x86_64-unknown-freebsd",
-        "aarch64-unknown-linux-musl",
-        "aarch64-pc-windows-msvc",
-        "armv7-linux-androideabi"
+        "aarch64-apple-darwin"
       ]
     }
   },
@@ -107,5 +98,11 @@
     "singleQuote": true,
     "arrowParens": "always"
   },
-  "packageManager": "yarn@4.3.0"
+  "packageManager": "yarn@4.3.0",
+  "optionalDependencies": {
+    "@asandmann/vision-win32-x64-msvc": "0.0.1",
+    "@asandmann/vision-darwin-x64": "0.0.1",
+    "@asandmann/vision-linux-x64-gnu": "0.0.1",
+    "@asandmann/vision-darwin-arm64": "0.0.1"
+  }
 }
