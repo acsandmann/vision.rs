@@ -32,10 +32,10 @@ switch (platform) {
   case 'android':
     switch (arch) {
       case 'arm64':
-        localFileExisted = existsSync(join(__dirname, '@asandmann/vision.android-arm64.node'))
+        localFileExisted = existsSync(join(__dirname, 'vision.android-arm64.node'))
         try {
           if (localFileExisted) {
-            nativeBinding = require('./@asandmann/vision.android-arm64.node')
+            nativeBinding = require('./vision.android-arm64.node')
           } else {
             nativeBinding = require('@asandmann/vision-android-arm64')
           }
@@ -44,10 +44,10 @@ switch (platform) {
         }
         break
       case 'arm':
-        localFileExisted = existsSync(join(__dirname, '@asandmann/vision.android-arm-eabi.node'))
+        localFileExisted = existsSync(join(__dirname, 'vision.android-arm-eabi.node'))
         try {
           if (localFileExisted) {
-            nativeBinding = require('./@asandmann/vision.android-arm-eabi.node')
+            nativeBinding = require('./vision.android-arm-eabi.node')
           } else {
             nativeBinding = require('@asandmann/vision-android-arm-eabi')
           }
@@ -62,10 +62,12 @@ switch (platform) {
   case 'win32':
     switch (arch) {
       case 'x64':
-        localFileExisted = existsSync(join(__dirname, '@asandmann/vision.win32-x64-msvc.node'))
+        localFileExisted = existsSync(
+          join(__dirname, 'vision.win32-x64-msvc.node')
+        )
         try {
           if (localFileExisted) {
-            nativeBinding = require('./@asandmann/vision.win32-x64-msvc.node')
+            nativeBinding = require('./vision.win32-x64-msvc.node')
           } else {
             nativeBinding = require('@asandmann/vision-win32-x64-msvc')
           }
@@ -74,10 +76,12 @@ switch (platform) {
         }
         break
       case 'ia32':
-        localFileExisted = existsSync(join(__dirname, '@asandmann/vision.win32-ia32-msvc.node'))
+        localFileExisted = existsSync(
+          join(__dirname, 'vision.win32-ia32-msvc.node')
+        )
         try {
           if (localFileExisted) {
-            nativeBinding = require('./@asandmann/vision.win32-ia32-msvc.node')
+            nativeBinding = require('./vision.win32-ia32-msvc.node')
           } else {
             nativeBinding = require('@asandmann/vision-win32-ia32-msvc')
           }
@@ -86,10 +90,12 @@ switch (platform) {
         }
         break
       case 'arm64':
-        localFileExisted = existsSync(join(__dirname, '@asandmann/vision.win32-arm64-msvc.node'))
+        localFileExisted = existsSync(
+          join(__dirname, 'vision.win32-arm64-msvc.node')
+        )
         try {
           if (localFileExisted) {
-            nativeBinding = require('./@asandmann/vision.win32-arm64-msvc.node')
+            nativeBinding = require('./vision.win32-arm64-msvc.node')
           } else {
             nativeBinding = require('@asandmann/vision-win32-arm64-msvc')
           }
@@ -102,10 +108,10 @@ switch (platform) {
     }
     break
   case 'darwin':
-    localFileExisted = existsSync(join(__dirname, '@asandmann/vision.darwin-universal.node'))
+    localFileExisted = existsSync(join(__dirname, 'vision.darwin-universal.node'))
     try {
       if (localFileExisted) {
-        nativeBinding = require('./@asandmann/vision.darwin-universal.node')
+        nativeBinding = require('./vision.darwin-universal.node')
       } else {
         nativeBinding = require('@asandmann/vision-darwin-universal')
       }
@@ -113,10 +119,10 @@ switch (platform) {
     } catch {}
     switch (arch) {
       case 'x64':
-        localFileExisted = existsSync(join(__dirname, '@asandmann/vision.darwin-x64.node'))
+        localFileExisted = existsSync(join(__dirname, 'vision.darwin-x64.node'))
         try {
           if (localFileExisted) {
-            nativeBinding = require('./@asandmann/vision.darwin-x64.node')
+            nativeBinding = require('./vision.darwin-x64.node')
           } else {
             nativeBinding = require('@asandmann/vision-darwin-x64')
           }
@@ -125,10 +131,12 @@ switch (platform) {
         }
         break
       case 'arm64':
-        localFileExisted = existsSync(join(__dirname, '@asandmann/vision.darwin-arm64.node'))
+        localFileExisted = existsSync(
+          join(__dirname, 'vision.darwin-arm64.node')
+        )
         try {
           if (localFileExisted) {
-            nativeBinding = require('./@asandmann/vision.darwin-arm64.node')
+            nativeBinding = require('./vision.darwin-arm64.node')
           } else {
             nativeBinding = require('@asandmann/vision-darwin-arm64')
           }
@@ -144,10 +152,10 @@ switch (platform) {
     if (arch !== 'x64') {
       throw new Error(`Unsupported architecture on FreeBSD: ${arch}`)
     }
-    localFileExisted = existsSync(join(__dirname, '@asandmann/vision.freebsd-x64.node'))
+    localFileExisted = existsSync(join(__dirname, 'vision.freebsd-x64.node'))
     try {
       if (localFileExisted) {
-        nativeBinding = require('./@asandmann/vision.freebsd-x64.node')
+        nativeBinding = require('./vision.freebsd-x64.node')
       } else {
         nativeBinding = require('@asandmann/vision-freebsd-x64')
       }
@@ -159,10 +167,12 @@ switch (platform) {
     switch (arch) {
       case 'x64':
         if (isMusl()) {
-          localFileExisted = existsSync(join(__dirname, '@asandmann/vision.linux-x64-musl.node'))
+          localFileExisted = existsSync(
+            join(__dirname, 'vision.linux-x64-musl.node')
+          )
           try {
             if (localFileExisted) {
-              nativeBinding = require('./@asandmann/vision.linux-x64-musl.node')
+              nativeBinding = require('./vision.linux-x64-musl.node')
             } else {
               nativeBinding = require('@asandmann/vision-linux-x64-musl')
             }
@@ -170,10 +180,12 @@ switch (platform) {
             loadError = e
           }
         } else {
-          localFileExisted = existsSync(join(__dirname, '@asandmann/vision.linux-x64-gnu.node'))
+          localFileExisted = existsSync(
+            join(__dirname, 'vision.linux-x64-gnu.node')
+          )
           try {
             if (localFileExisted) {
-              nativeBinding = require('./@asandmann/vision.linux-x64-gnu.node')
+              nativeBinding = require('./vision.linux-x64-gnu.node')
             } else {
               nativeBinding = require('@asandmann/vision-linux-x64-gnu')
             }
@@ -184,10 +196,12 @@ switch (platform) {
         break
       case 'arm64':
         if (isMusl()) {
-          localFileExisted = existsSync(join(__dirname, '@asandmann/vision.linux-arm64-musl.node'))
+          localFileExisted = existsSync(
+            join(__dirname, 'vision.linux-arm64-musl.node')
+          )
           try {
             if (localFileExisted) {
-              nativeBinding = require('./@asandmann/vision.linux-arm64-musl.node')
+              nativeBinding = require('./vision.linux-arm64-musl.node')
             } else {
               nativeBinding = require('@asandmann/vision-linux-arm64-musl')
             }
@@ -195,10 +209,12 @@ switch (platform) {
             loadError = e
           }
         } else {
-          localFileExisted = existsSync(join(__dirname, '@asandmann/vision.linux-arm64-gnu.node'))
+          localFileExisted = existsSync(
+            join(__dirname, 'vision.linux-arm64-gnu.node')
+          )
           try {
             if (localFileExisted) {
-              nativeBinding = require('./@asandmann/vision.linux-arm64-gnu.node')
+              nativeBinding = require('./vision.linux-arm64-gnu.node')
             } else {
               nativeBinding = require('@asandmann/vision-linux-arm64-gnu')
             }
@@ -209,10 +225,12 @@ switch (platform) {
         break
       case 'arm':
         if (isMusl()) {
-          localFileExisted = existsSync(join(__dirname, '@asandmann/vision.linux-arm-musleabihf.node'))
+          localFileExisted = existsSync(
+            join(__dirname, 'vision.linux-arm-musleabihf.node')
+          )
           try {
             if (localFileExisted) {
-              nativeBinding = require('./@asandmann/vision.linux-arm-musleabihf.node')
+              nativeBinding = require('./vision.linux-arm-musleabihf.node')
             } else {
               nativeBinding = require('@asandmann/vision-linux-arm-musleabihf')
             }
@@ -220,10 +238,12 @@ switch (platform) {
             loadError = e
           }
         } else {
-          localFileExisted = existsSync(join(__dirname, '@asandmann/vision.linux-arm-gnueabihf.node'))
+          localFileExisted = existsSync(
+            join(__dirname, 'vision.linux-arm-gnueabihf.node')
+          )
           try {
             if (localFileExisted) {
-              nativeBinding = require('./@asandmann/vision.linux-arm-gnueabihf.node')
+              nativeBinding = require('./vision.linux-arm-gnueabihf.node')
             } else {
               nativeBinding = require('@asandmann/vision-linux-arm-gnueabihf')
             }
@@ -234,10 +254,12 @@ switch (platform) {
         break
       case 'riscv64':
         if (isMusl()) {
-          localFileExisted = existsSync(join(__dirname, '@asandmann/vision.linux-riscv64-musl.node'))
+          localFileExisted = existsSync(
+            join(__dirname, 'vision.linux-riscv64-musl.node')
+          )
           try {
             if (localFileExisted) {
-              nativeBinding = require('./@asandmann/vision.linux-riscv64-musl.node')
+              nativeBinding = require('./vision.linux-riscv64-musl.node')
             } else {
               nativeBinding = require('@asandmann/vision-linux-riscv64-musl')
             }
@@ -245,10 +267,12 @@ switch (platform) {
             loadError = e
           }
         } else {
-          localFileExisted = existsSync(join(__dirname, '@asandmann/vision.linux-riscv64-gnu.node'))
+          localFileExisted = existsSync(
+            join(__dirname, 'vision.linux-riscv64-gnu.node')
+          )
           try {
             if (localFileExisted) {
-              nativeBinding = require('./@asandmann/vision.linux-riscv64-gnu.node')
+              nativeBinding = require('./vision.linux-riscv64-gnu.node')
             } else {
               nativeBinding = require('@asandmann/vision-linux-riscv64-gnu')
             }
@@ -258,10 +282,12 @@ switch (platform) {
         }
         break
       case 's390x':
-        localFileExisted = existsSync(join(__dirname, '@asandmann/vision.linux-s390x-gnu.node'))
+        localFileExisted = existsSync(
+          join(__dirname, 'vision.linux-s390x-gnu.node')
+        )
         try {
           if (localFileExisted) {
-            nativeBinding = require('./@asandmann/vision.linux-s390x-gnu.node')
+            nativeBinding = require('./vision.linux-s390x-gnu.node')
           } else {
             nativeBinding = require('@asandmann/vision-linux-s390x-gnu')
           }
@@ -284,6 +310,7 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-const { vnRecognizeTextRequest } = nativeBinding
+const { Ocr, vnRecognizeTextRequest } = nativeBinding
 
+module.exports.Ocr = Ocr
 module.exports.vnRecognizeTextRequest = vnRecognizeTextRequest

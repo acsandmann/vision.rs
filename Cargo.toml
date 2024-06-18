@@ -1,23 +1,23 @@
 [package]
-authors = ["me@atticus.pw"]
 edition = "2021"
-name    = "vision"
-version = "0.1.0"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+name = "asandmann_vision"
+version = "0.0.0"
 
 [lib]
 crate-type = ["cdylib"]
 
 [dependencies]
-napi        = "2"
-napi-derive = "2"
+napi = { version = "2.12.2", default-features = false, features = ["napi4"] }
+napi-derive = "2.12.2"
 core-graphics2 = "0.3.2"
 cocoa = "0.25.0"
 objc = "0.2.7"
+#objc2 = { version = "0.5.2" }
+#objc2-foundation = { version = "0.2.2", features = ["NSArray", "NSDictionary", "NSRange"] }
 
 [build-dependencies]
-napi-build = "2"
+napi-build = "2.0.1"
 
 [profile.release]
 lto = true
+strip = "symbols"
