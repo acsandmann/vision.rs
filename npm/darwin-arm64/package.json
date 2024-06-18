@@ -28,5 +28,8 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
-  "repository": "git@https://github.com/acsandmann/vision.rs.git"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acsandmann/vision.rs.git"
+  }
 }
