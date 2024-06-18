@@ -1,7 +1,7 @@
 name: CI
 env:
   DEBUG: napi:*
-  APP_NAME: '@asandmann/vision'
+  APP_NAME: vision
   MACOSX_DEPLOYMENT_TARGET: '10.13'
 permissions:
   contents: write
