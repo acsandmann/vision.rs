@@ -8,7 +8,8 @@
     "triples": {
       "defaults": false,
       "additional": [
-        "universal-apple-darwin"
+        "x86-64-apple-darwin",
+        "aarch64-apple-darwin"
       ]
     }
   },
@@ -28,6 +29,7 @@
     "version": "napi version"
   },
   "optionalDependencies": {
-    "@asandmann/vision-darwin-universal": "0.0.1"
+    "@asandmann/vision-apple-x86-darwin": "0.0.1",
+    "@asandmann/vision-darwin-arm64": "0.0.1"
   }
 }
