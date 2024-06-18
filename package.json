@@ -1,6 +1,6 @@
 {
   "name": "@asandmann/vision",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",
   "napi": {
