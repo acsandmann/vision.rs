@@ -82,7 +82,7 @@ impl ocr {
 }
 
 #[napi]
-pub unsafe fn vn_recognize_text_request(_w: u32, _h: u32, b: Buffer, t: Option<u8>) -> Vec<String> {
+pub unsafe fn vn_recognize_text_request(b: Buffer, t: Option<u8>) -> Vec<String> {
   let mut res: Vec<String> = vec![];
   let data_provider = CGDataProvider::from_slice(b.as_ref()).unwrap();
   let image = match t {
