@@ -310,7 +310,6 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-const { Ocr, vnRecognizeTextRequest } = nativeBinding
+const { vnRecognizeTextRequest } = nativeBinding
 
-module.exports.Ocr = Ocr
 module.exports.vnRecognizeTextRequest = vnRecognizeTextRequest
