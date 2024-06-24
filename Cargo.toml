@@ -19,5 +19,10 @@ objc = "0.2.7"
 napi-build = "2.0.1"
 
 [profile.release]
-lto = true
-strip = "symbols"
+lto = 'fat'
+debug = false
+opt-level = 3
+panic = 'abort'
+strip = 'symbols'
+codegen-units = 1
+overflow-checks = false
