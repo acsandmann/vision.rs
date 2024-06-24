@@ -11,3 +11,11 @@ yarn.lock
 .yarn
 __test__
 renovate.json
+.editorconfig
+.eslintrc.yml
+.gitattributes
+.taplo.toml
+Cargo.toml
+LICENSE
+README.md
+build.rs
